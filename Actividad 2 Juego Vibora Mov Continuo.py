@@ -84,14 +84,14 @@ def move():
         return
 
     snake.append(head)
-        
+    ltmp = control(food)
+    aux = ltmp[randrange(0,len(ltmp))]
+    food.x = aux[0]
+    food.y = aux[1]
+    
     if head == food:
         print('Snake:', len(snake))
         print(food)
-        ltmp = control(food)
-        aux = ltmp[randrange(0,len(ltmp))]
-        food.x = aux[0]
-        food.y = aux[1]
     else:
         snake.pop(0)
 
